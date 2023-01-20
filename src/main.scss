@@ -81,17 +81,53 @@ header {
   }
 }
 
+section {
+  padding: 15em 0;
+}
+
 .hero {
     color: white;
+    padding-top: 0;
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-top: 2em;
     line-height: 3.3rem;
   }
   .subhead {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 400;
   }
+}
+
+//.experience {
+ // padding: 10em 0;
+  
+ // h2 {
+    // color: white;
+ // }
+//}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  margin-left: -3px;
+}
+
+.container {
+  padding-left: 3.5em;
+  position: relative;
+  background-color: inherit;
 }
 
 .open-nav {
@@ -152,7 +188,7 @@ header {
       
       a {
         color: white;
-        font-size: .8rem;
+        font-size: 0.84rem;
         padding: 0;
 
         &:hover {
@@ -165,7 +201,7 @@ header {
   
   section.hero {
     color: black;
-    margin-bottom: 8em;
+    
     height: auto;
     width: 40%;
   }
