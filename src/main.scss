@@ -121,13 +121,13 @@ section {
   margin-left: -3px;
 }
 
-.container {
+.tl-container {
   padding-left: 3.5em;
   position: relative;
   background-color: inherit;
 }
 
-.container::after {
+.tl-container::after {
   content: '';
   position: absolute;
   width: 25px;
@@ -140,7 +140,7 @@ section {
   z-index: 1;
 }
 
-.content {
+.tl-content {
   .job {
     margin-top: 2em;
     margin-bottom: 0.2em;
@@ -162,6 +162,60 @@ section {
     padding-left: 1.4em;
     font-size: 1rem;
   }
+}
+
+//////////////////////////////////////////////////
+
+.edu-container {
+  .institution {
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+  }
+  .role, .degree {
+    font-size: 1.4rem;
+    span {
+      color: blue;
+    }
+  }
+  .date {
+    color: gray;
+    padding-top: 0.1em;
+    font-size: 0.8rem;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+  
+  .uiuc {
+    width: 25%;
+    height: 100%;
+    display: block;
+    color: white;
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+    background-color: blue;
+  }
+  .rokaf {
+    width: 30%;
+    height: 100%;
+    display: block;
+    color: white;
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+    background-color: blue;
+  }
+
 }
 
 .open-nav {
