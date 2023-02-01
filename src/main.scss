@@ -1,6 +1,6 @@
 body {
   margin: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   // font-family: 'Inconsolata', sans-serif;
 }
 
@@ -12,7 +12,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://avatars.githubusercontent.com/u/60252636?v=4');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://avatars.githubusercontent.com/u/60252636?v=4");
   background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
@@ -26,12 +27,12 @@ a {
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
-  
+
   span {
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
-    fill: none;  
+    fill: none;
   }
 }
 
@@ -45,7 +46,7 @@ nav {
   z-index: 999;
   text-transform: uppercase;
   transform: translateX(100%);
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 
   ul {
     list-style-type: none;
@@ -54,11 +55,11 @@ nav {
 
     a {
       color: black;
-      padding: .75em 2em;
+      padding: 0.75em 2em;
       display: block;
 
       &:hover {
-        background: rgb(235,235,235);
+        background: rgb(235, 235, 235);
       }
     }
   }
@@ -76,18 +77,18 @@ header {
 
   .menu {
     width: 2.3em;
-    margin-top: -.6em;
+    margin-top: -0.6em;
     cursor: pointer;
   }
 }
 
 section {
-  padding: 15em 0;
+  padding: 10em 0 20em 0;
 }
 
 .hero {
-    color: white;
-    padding-top: 0;
+  color: white;
+  padding-top: 0;
   h1 {
     font-size: 3.5rem;
     margin-top: 2em;
@@ -111,7 +112,7 @@ section {
 }
 
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background-color: black;
@@ -128,7 +129,7 @@ section {
 }
 
 .tl-container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -148,7 +149,8 @@ section {
   .company {
     font-size: 1.4rem;
   }
-  .date, .location {
+  .date,
+  .location {
     color: gray;
     padding-top: 0.1em;
     font-size: 0.8rem;
@@ -164,14 +166,13 @@ section {
   }
 }
 
-//////////////////////////////////////////////////
-
 .edu-container {
   .institution {
     margin-top: 2em;
     margin-bottom: 0.2em;
   }
-  .role, .degree {
+  .role,
+  .degree {
     font-size: 1.4rem;
     span {
       color: blue;
@@ -192,7 +193,7 @@ section {
   border: 1px solid black;
   overflow: hidden;
   position: relative;
-  
+
   .uiuc {
     width: 25%;
     height: 100%;
@@ -215,7 +216,72 @@ section {
     padding-right: 5px;
     background-color: blue;
   }
+}
 
+//////////////////////////////////////////////////
+
+.proj-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin: 2em 0 0.2em 0;
+  grid-auto-rows: 1fr;
+}
+
+.proj-container > a {
+  background-color: rgb(233, 233, 233);
+  padding: 1em;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.proj-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.proj-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-bottom: 0.5em;
+  color: #0969da;
+}
+
+.proj-title:hover {
+  text-decoration: underline;
+}
+
+.proj-desc {
+  margin: 0;
+}
+
+.tags {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 3em;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+  font-size: 0.8rem;
+  align-self: flex-start;
+}
+
+.lang-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  top: 1px;
+}
+
+.tag {
+  background: hsl(0 0% 100% / 0.4);
+  padding: 0.25rem 0.5rem;
 }
 
 .open-nav {
@@ -229,51 +295,50 @@ section {
 }
 
 @media only screen and (min-width: 920px) {
-  
   .hero-img {
     left: unset;
     right: 0;
     width: 50%;
     height: 42em;
   }
-  
+
   .menu {
     display: none;
   }
-  
+
   .logo {
     // font-family: 'Raleway', sans-serif;
     color: black;
-  
+
     span {
       -webkit-text-stroke-color: black;
     }
   }
-  
-  nav { 
+
+  nav {
     transform: translateX(0);
     position: unset;
     display: block;
     width: auto;
     height: auto;
     background: none;
-    
+
     svg.close {
       display: none;
     }
-    
+
     ul {
       display: flex;
       margin: 0;
-      
+
       li {
-        padding: .5em .9em;
+        padding: 0.5em 0.9em;
       }
-      
+
       .last {
         padding-right: 0;
       }
-      
+
       a {
         color: white;
         font-size: 0.84rem;
@@ -286,14 +351,17 @@ section {
       }
     }
   }
-  
+
   section.hero {
     color: black;
-    
+
     height: auto;
     width: 40%;
   }
-  
+
+  .proj-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
