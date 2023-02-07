@@ -1,0 +1,407 @@
+body {
+	margin: 1.5em;
+	font-family: "Inter", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hero-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://avatars.githubusercontent.com/u/60252636?v=4");
+	background-size: cover;
+	background-position-x: 20%;
+	background-position-y: 20%;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+}
+
+.logo {
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.logo span {
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+	fill: none;
+}
+
+nav {
+	position: fixed;
+	right: 0;
+	top: 0;
+	background: white;
+	height: 100vh;
+	width: 50%;
+	z-index: 999;
+	text-transform: uppercase;
+	transform: translateX(100%);
+	transition: transform 0.5s ease-in-out;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 8em;
+}
+
+nav ul a {
+	color: black;
+	padding: 0.75em 2em;
+	display: block;
+}
+
+nav ul a:hover {
+	background: #ebebeb;
+}
+
+nav .close {
+	float: right;
+	margin: 2em;
+	width: 2.5em;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+header .menu {
+	width: 2.3em;
+	margin-top: -0.6em;
+	cursor: pointer;
+}
+
+section {
+	padding: 10em 0 20em 0;
+}
+
+.hero {
+	color: white;
+	padding-top: 0;
+}
+
+.hero h1 {
+	font-size: 3.5rem;
+	margin-top: 2em;
+	line-height: 3.3rem;
+}
+
+.hero .subhead {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.title {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.timeline {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: 6px;
+	background-color: black;
+	top: 0;
+	bottom: 0;
+	left: 32px;
+	margin-left: -3px;
+}
+
+.tl-container {
+	padding-left: 3.5em;
+	position: relative;
+	background-color: inherit;
+}
+
+.tl-container::after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	left: 15px;
+	background-color: white;
+	border: 4px solid black;
+	top: -3px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.tl-content .job {
+	margin-top: 2em;
+	margin-bottom: 0.2em;
+}
+
+.tl-content .company {
+	font-size: 1.4rem;
+}
+
+.tl-content .date,
+.tl-content .location {
+	color: gray;
+	padding-top: 0.1em;
+	font-size: 0.8rem;
+}
+
+.tl-content .team {
+	padding-top: 0.2em;
+	font-size: 1.2rem;
+}
+
+.tl-content .description ul {
+	margin: 0;
+	padding-left: 1.4em;
+	font-size: 1rem;
+}
+
+.edu-container .institution {
+	margin-top: 2em;
+	margin-bottom: 0.2em;
+}
+
+.edu-container .role,
+.edu-container .degree {
+	font-size: 1.4rem;
+}
+
+.edu-container .role span,
+  .edu-container .degree span {
+	color: blue;
+}
+
+.edu-container .date {
+	color: gray;
+	padding-top: 0.1em;
+	font-size: 0.8rem;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	margin: 20px 0;
+	border: 1px solid black;
+	overflow: hidden;
+	position: relative;
+}
+
+.progress-bar .uiuc {
+	width: 25%;
+	height: 100%;
+	display: block;
+	color: white;
+	line-height: 30px;
+	position: absolute;
+	text-align: end;
+	padding-right: 5px;
+	background-color: blue;
+}
+
+.progress-bar .rokaf {
+	width: 30%;
+	height: 100%;
+	display: block;
+	color: white;
+	line-height: 30px;
+	position: absolute;
+	text-align: end;
+	padding-right: 5px;
+	background-color: blue;
+}
+
+.proj-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1em;
+	margin: 2em 0 0.2em 0;
+	grid-auto-rows: 1fr;
+}
+
+.proj-container > a {
+	background-color: #e9e9e9;
+	padding: 1em;
+	font-size: 1rem;
+	color: inherit;
+}
+
+.proj-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.proj-title {
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.4rem;
+	padding-bottom: 0.5em;
+	color: #0969da;
+}
+
+.proj-title:hover {
+	text-decoration: underline;
+}
+
+.proj-desc {
+	margin: 0;
+}
+
+.tags {
+	margin-top: auto;
+	margin-bottom: 0;
+	padding-top: 3em;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	list-style: none;
+	font-size: 0.8rem;
+	align-self: flex-start;
+}
+
+.lang-color {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	position: relative;
+	top: 1px;
+}
+
+.tag {
+	background: rgba(255, 255, 255, 0.4);
+	padding: 0.25rem 0.5rem;
+}
+
+form {
+	margin: 2em 0 0.2em 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+input,
+select,
+textarea {
+	padding: 1.4rem;
+	background: transparent;
+	border: 1px solid black;
+	font-family: "Raleway", sans-serif;
+}
+
+textarea {
+	height: 6rem;
+}
+
+button {
+	width: 8rem;
+	padding: 1.4rem;
+	cursor: pointer;
+	background: #232323;
+	color: white;
+	font-family: "Raleway", sans-serif;
+	border-style: none;
+}
+
+footer {
+	text-align: center;
+	padding: 3px;
+}
+
+.open-nav {
+	transform: translateX(0);
+}
+
+@media only screen and (min-width: 680px) {
+	body {
+		margin: 1.5em 5em;
+	}
+}
+
+@media only screen and (min-width: 920px) {
+	.hero-img {
+		left: unset;
+		right: 0;
+		width: 50%;
+		height: 42em;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.logo {
+		color: black;
+	}
+
+	.logo span {
+		-webkit-text-stroke-color: black;
+	}
+
+	nav {
+		transform: translateX(0);
+		position: unset;
+		display: block;
+		width: auto;
+		height: auto;
+		background: none;
+	}
+
+	nav svg.close {
+		display: none;
+	}
+
+	nav ul {
+		display: flex;
+		margin: 0;
+	}
+
+	nav ul li {
+		padding: 0.5em 0.9em;
+	}
+
+	nav ul .last {
+		padding-right: 0;
+	}
+
+	nav ul a {
+		color: white;
+		font-size: 0.84rem;
+		padding: 0;
+	}
+
+	nav ul a:hover {
+		background: none;
+		text-decoration: underline;
+	}
+
+	section.hero {
+		color: black;
+		height: auto;
+		width: 40%;
+	}
+
+	.proj-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.wrapper {
+		width: calc(1200px - 15em);
+		margin: 0 auto;
+	}
+}
